@@ -63,29 +63,23 @@ public:
 
 int main()
 {
-    Matrix A(1, 2, 3, 4);
-    Matrix B(5, 6, 7, 8);
+    int a,b,c,d;
+    int e,f,g,h;
+    cout<<"Enter the elements of Matrix A:";
+    cin>>a>>b>>c>>d;
+    cout<<"Enter the elements of Matrix B:";
+    cin>>e>>f>>g>>h;
+Matrix A(a, b, c, d);
+Matrix B(e, f, g, h);
 
-    Matrix sum = A + B;
-    Matrix product = A * B;
 
-    // Unit Tests
-    assert(sum[0][0] == 6);
-    assert(sum[1][1] == 12);
-    assert(product[0][0] == 19);
-    assert(product[0][1] == 22);
-    assert(product[1][0] == 43);
-    assert(product[1][1] == 50);
 
-    cout << "Matrix A:" << endl;
-    cout << A;
-    cout << "Matrix B:" << endl;
-    cout << B;
-    cout << "Addition of Matrices:" << endl;
-    cout << sum;
-    cout << "Multiplication of Matrices:" << endl;
-    cout << product;
-    cout << "All unit tests passed successfully." << endl;
-
-    return 0;
+Matrix sum = A + B;
+Matrix product = A * B;
+// Unit Tests
+cout<<"Matrix A:\n" << A;
+cout<<"Matrix B:\n" << B;
+cout<<"Addition of matrices A and B:\n" << sum;
+cout<<"Multiplication of matrices A and B:\n" << product;
+return 0;
 }

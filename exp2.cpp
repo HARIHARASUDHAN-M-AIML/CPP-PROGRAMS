@@ -56,20 +56,25 @@ public:
 
 int main()
 {
-    Circle c(5);
-    Rectangle r(4, 6);
-    Triangle t(10, 8);
-    
-    Shape *ptr;
+   int radius,length,breadth,base,height;
+    cout << "Enter radius of circle: ";
+    cin >> radius;
+    cout << "Enter length and breadth of rectangle: ";
+    cin >> length >> breadth;
+    cout << "Enter base and height of triangle: ";
+    cin >> base >> height;
+Circle c(radius);
+Rectangle r(length, breadth);
+Triangle t(base, height);
+Shape *ptr;
+ptr = &c;
+cout << "Area of Circle: " << ptr->area() << endl;
+ptr = &r;
+cout << "Area of Rectangle: " << ptr->area() << endl;
 
-    ptr = &c;
-    cout << "Area of Circle: " << ptr->area() << endl;
 
-    ptr = &r;
-    cout << "Area of Rectangle: " << ptr->area() << endl;
 
-    ptr = &t;
-    cout << "Area of Triangle: " << ptr->area() << endl;
-
-    return 0;
+ptr = &t;
+cout << "Area of Triangle: " << ptr->area() << endl;
+return 0;
 }
