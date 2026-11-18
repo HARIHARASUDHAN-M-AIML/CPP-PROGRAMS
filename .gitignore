@@ -1,0 +1,11 @@
+# Generated Windows binaries and build outputs
+*.exe
+*.o
+*.obj
+*.pdb
+
+# Local compiler installation
+/toolchains/
+
+# Machine-specific VS Code settings
+/.vscode/
